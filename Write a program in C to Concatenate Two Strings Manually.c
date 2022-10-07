@@ -1,41 +1,25 @@
 #include <stdio.h>
-#include <string.h>
+
 int main ()
 {
     char arr[500], arr2[500];
-    char  max[0] = 0, min[0] = 0;
-    int i,j, length, c=0;
+
+    int i,j;
     gets(arr);
+    gets(arr2);
 
 
-    length = strlen(arr);
-
-
-    for (i=0; i<length; i++)
-    {
-        if (arr[i] == ' ' && arr[i] != '0')
-        {
-            c++;
-        }
-    }
-    for (i=0; i<c; i++)
+    for (i=0; arr[i] != '\0'; i++)
     {
 
-        if (max[i] > max[0])
-        {
-            max[0] = max[i];
-
-        }
-        if (max[i] < min[0])
-        {
-            min[0] = max[i];
-        }
-
     }
+    for (j=0; arr2[j] != '\0'; j++, i++)
+    {
+        arr[i] = arr2[j];
+    }
+    arr[i] = '\0';
 
-    printf("The largest word is: %s\n", max[0]);
-    printf("The Smallest word is: %s\n", min[0]);
-
+   printf("%s \n", arr);
 
     return 0;
 }

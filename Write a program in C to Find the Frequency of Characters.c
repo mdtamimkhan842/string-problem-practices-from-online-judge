@@ -1,27 +1,23 @@
-//answer wrong , i will try next day for the right answer
-
 
 #include <stdio.h>
 #include <string.h>
 int main ()
 {
-    char arr[500], ch[50];
+    char arr[500], ch;
     int i, j, length, c=0;
 
     gets(arr);
-    gets(ch);
+    scanf("%c", &ch);
 
     length = strlen(arr);
 
-    for (i=0, j=0; i<length; i++, j++)
+    for (i=0; i<length; i++)
     {
-        if (arr[i] == 'i')
-        {
-
+        if (ch == arr[i])
             c++;
-        }
-    }
 
+
+    }
     printf("the number of the index : %d\n", c);
 
 
